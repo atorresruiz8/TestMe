@@ -16,8 +16,8 @@ extension Feedback {
         return NSFetchRequest<Feedback>(entityName: "Feedback")
     }
 
-    @NSManaged public var user: String?
     @NSManaged public var feedback: String?
-    @NSManaged public var userFeedback: User?
+    @NSManaged public var user: String?
+    @NSManaged public var userFeedback: Account?
 
 }
