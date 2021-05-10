@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */; };
 		8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */; };
 		8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */; };
 		8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A302649827B00D688C3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0935E5F9DD135CF6CD6B401A /* Pods-TestMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMe.release.xcconfig"; path = "Target Support Files/Pods-TestMe/Pods-TestMe.release.xcconfig"; sourceTree = "<group>"; };
 		28D2D30582E83284C6A1EF74 /* Pods_TestMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8B8B5A292649827B00D688C3 /* TestMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				8B8B5A3A2649827E00D688C3 /* LaunchScreen.storyboard */,
 				8B8B5A3D2649827E00D688C3 /* Info.plist */,
 				8B8B5A352649827B00D688C3 /* TestMe.xcdatamodeld */,
+				8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */,
 			);
 			path = TestMe;
 			sourceTree = "<group>";
@@ -91,7 +94,6 @@
 				C53A830D235ABB88FD71F7D0 /* Pods-TestMe.debug.xcconfig */,
 				0935E5F9DD135CF6CD6B401A /* Pods-TestMe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +213,7 @@
 			files = (
 				8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */,
 				8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */,
+				8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */,
 				8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */,
 				8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */,
 			);
