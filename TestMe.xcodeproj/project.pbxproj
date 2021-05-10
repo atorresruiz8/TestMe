@@ -15,6 +15,8 @@
 		8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A352649827B00D688C3 /* TestMe.xcdatamodeld */; };
 		8B8B5A392649827E00D688C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A382649827E00D688C3 /* Assets.xcassets */; };
 		8B8B5A3C2649827E00D688C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A3A2649827E00D688C3 /* LaunchScreen.storyboard */; };
+		F4FE1B822649CD1500D8C91F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE1B812649CD1500D8C91F /* LoginViewController.swift */; };
+		F4FE1B852649D00000D8C91F /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE1B842649D00000D8C91F /* DBHelper.swift */; };
 		FA612AC4BCA0010D890CEB07 /* Pods_TestMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D2D30582E83284C6A1EF74 /* Pods_TestMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		8B8B5A3B2649827E00D688C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B8B5A3D2649827E00D688C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C53A830D235ABB88FD71F7D0 /* Pods-TestMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMe.debug.xcconfig"; path = "Target Support Files/Pods-TestMe/Pods-TestMe.debug.xcconfig"; sourceTree = "<group>"; };
+		F4FE1B812649CD1500D8C91F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F4FE1B842649D00000D8C91F /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				8B8B5A3D2649827E00D688C3 /* Info.plist */,
 				8B8B5A352649827B00D688C3 /* TestMe.xcdatamodeld */,
 				8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */,
+				F4FE1B812649CD1500D8C91F /* LoginViewController.swift */,
+				F4FE1B842649D00000D8C91F /* DBHelper.swift */,
 			);
 			path = TestMe;
 			sourceTree = "<group>";
@@ -211,8 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FE1B822649CD1500D8C91F /* LoginViewController.swift in Sources */,
 				8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */,
 				8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */,
+				F4FE1B852649D00000D8C91F /* DBHelper.swift in Sources */,
 				8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */,
 				8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */,
 				8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */,
@@ -365,6 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
