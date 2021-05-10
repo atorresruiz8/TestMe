@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Quiz" representedClassName="Quiz" syncable="YES"/>
-    <entity name="User" representedClassName="User" syncable="YES"/>
+    <entity name="Feedback" representedClassName="Feedback" syncable="YES" codeGenerationType="class">
+        <attribute name="feedback" optional="YES" attributeType="String"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
+        <relationship name="userFeedback" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userFeedback" inverseEntity="User"/>
+    </entity>
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES">
+        <attribute name="a1" optional="YES" attributeType="String"/>
+        <attribute name="a2" optional="YES" attributeType="String"/>
+        <attribute name="a3" optional="YES" attributeType="String"/>
+        <attribute name="a4" optional="YES" attributeType="String"/>
+        <attribute name="a5" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="correct1" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="correct2" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="correct3" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="correct4" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="correct5" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="question1" optional="YES" attributeType="String"/>
+        <attribute name="question2" optional="YES" attributeType="String"/>
+        <attribute name="question3" optional="YES" attributeType="String"/>
+        <attribute name="question4" optional="YES" attributeType="String"/>
+        <attribute name="question5" optional="YES" attributeType="String"/>
+        <attribute name="questionType" optional="YES" attributeType="String"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="userQuiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userQuiz" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="adminRole" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="blockedStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="feedback" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="quizzesTaken" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="scoreFour" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="scoreOne" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="scoreThree" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="scoreTwo" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="subscriptionStatus" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="userFeedback" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feedback" inverseName="userFeedback" inverseEntity="Feedback"/>
+        <relationship name="userQuiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="userQuiz" inverseEntity="Quiz"/>
+    </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="29"/>
-        <element name="Quiz" positionX="-54" positionY="-9" width="128" height="29"/>
+        <element name="Quiz" positionX="-54" positionY="-9" width="128" height="314"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="224"/>
+        <element name="Feedback" positionX="-54" positionY="36" width="128" height="74"/>
     </elements>
 </model>

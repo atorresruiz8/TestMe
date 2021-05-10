@@ -8,10 +8,10 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    var textData = ["item1", "item2", "item3", "item4", "item5"]
+    var textData = ["Profile", "Subscription", "Rankings", "Feedback", "Log Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor.blue
+        tableView.backgroundColor = UIColor.systemGreen
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
@@ -31,7 +31,7 @@ class MenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.systemGreen
 
         cell.textLabel?.text = textData[indexPath.row]
         
