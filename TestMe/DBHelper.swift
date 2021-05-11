@@ -73,4 +73,18 @@ class DBHelper {
         return a!
     }
     
+    func wipeAccounts() { // wipes the core data clean for accounts
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Account")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+        
+        do {
+            try persistentContainer.viewContext.execute(deleteRequest)
+            print("Everything is reset.")
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
 }
