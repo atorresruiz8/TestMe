@@ -18,6 +18,15 @@ class DBHelper {
         let user = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
         user.username = object["username"]
         user.password = object["password"]
+        user.blockedStatus = false
+        user.subscriptionStatus = "none"
+        user.adminRole = false
+        user.feedback = ""
+        user.quizzesTaken = 0.0
+        user.scoreOne = 0.0
+        user.scoreTwo = 0.0
+        user.scoreThree = 0.0
+        user.scoreFour = 0.0
 
         do {
             try context?.save()

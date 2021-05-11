@@ -35,15 +35,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
     }
     
     @IBAction func signIn(_ sender: Any) {
+        let thisUser = DBHelper.inst.getOneAccount(username: username.text!)
         let data = DBHelper.inst.getAccounts()
         for a in data {
             if (username.text == "admin" && password.text == "admin") { // bring up the special admin page if the username/password combo are correct
                 // instantiate admin screen
                 print("welcome admin")
+                let adminPage = self.storyboard?.instantiateViewController(identifier: "admin") as! AdminViewController
+                adminPage.modalPresentationStyle = .fullScreen
+                self.present(adminPage, animated: true, completion: nil)
             }
             
             if (username.text == a.username! && password.text == a.password!) { // Verifies that the user credentials are in the core data and lets the user login
                 // instantiate dashboard screen
+            } else if (thisUser.blockedStatus == true) {
+                print("You are blocked.")
             }
         }
     }
