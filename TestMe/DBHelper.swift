@@ -23,7 +23,7 @@ class DBHelper {
             try context?.save()
             print("User created with username:", user.username!, "and password:", user.password!)
         } catch {
-            print("data not saved")
+            print("Account not created.")
         }
     }
     
@@ -39,4 +39,29 @@ class DBHelper {
         return a
     }
     
+    func getOneAccount (username : String)-> Account { // checks for one specific instance of account credentials to see if it exists in coredata
+        
+        var a : Account?
+        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Account")
+        fetchReq.predicate = NSPredicate(format: "username == %@", username)
+        
+        fetchReq.fetchLimit = 1
+        do {
+            let req = try context?.fetch(fetchReq) as! [Account]
+            if(req.count != 0){
+                a = req.first!
+                // if this breaks try:
+                // a = req.first as! Account
+            }
+            else { // Account data doesn't exist
+                print("Account data not found.")
+            }
+        }
+        catch {
+            print("Error.")
+        }
+        
+        return a!
     }
+    
+}
