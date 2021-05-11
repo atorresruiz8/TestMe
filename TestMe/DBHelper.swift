@@ -49,7 +49,6 @@ class DBHelper {
     }
     
     func getOneAccount (username : String)-> Account { // checks for one specific instance of account credentials to see if it exists in coredata
-        
         var a : Account?
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Account")
         fetchReq.predicate = NSPredicate(format: "username == %@", username)
@@ -84,6 +83,18 @@ class DBHelper {
             print("Everything is reset.")
         } catch let error as NSError {
             print(error)
+        }
+    }
+    
+    func addCurrUser(object: String) { // adds a current user object to the coredata 
+        let currUser = NSEntityDescription.insertNewObject(forEntityName: "CurrentUser", into: context!) as! CurrentUser
+        currUser.username = object
+        
+        do {
+            try context?.save()
+            print("Current user is", currUser.username!)
+        } catch {
+            print("Username not passed properly.")
         }
     }
     

@@ -27,12 +27,7 @@ extension Quiz {
     @NSManaged public var correct3: Bool
     @NSManaged public var correct4: Bool
     @NSManaged public var correct5: Bool
-    @NSManaged public var question1: String?
-    @NSManaged public var question2: String?
-    @NSManaged public var question3: String?
-    @NSManaged public var question4: String?
-    @NSManaged public var question5: String?
-    @NSManaged public var questionType: String?
+    @NSManaged public var name: String?
     @NSManaged public var score: Double
     @NSManaged public var userQuiz: Account?
 

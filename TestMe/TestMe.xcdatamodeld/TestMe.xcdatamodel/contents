@@ -12,11 +12,22 @@
         <attribute name="scoreTwo" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="subscriptionStatus" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentUser" inverseName="user" inverseEntity="CurrentUser"/>
         <relationship name="userFeedback" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feedback" inverseName="userFeedback" inverseEntity="Feedback"/>
         <relationship name="userQuiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="userQuiz" inverseEntity="Quiz"/>
     </entity>
+    <entity name="AvailableQuiz" representedClassName="AvailableQuiz" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="q1" optional="YES" attributeType="String"/>
+        <attribute name="q2" optional="YES" attributeType="String"/>
+        <attribute name="q3" optional="YES" attributeType="String"/>
+        <attribute name="q4" optional="YES" attributeType="String"/>
+        <attribute name="q5" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="CurrentUser" representedClassName="CurrentUser" syncable="YES">
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="user" inverseEntity="Account"/>
     </entity>
     <entity name="Feedback" representedClassName="Feedback" syncable="YES">
         <attribute name="feedback" optional="YES" attributeType="String"/>
@@ -35,19 +46,15 @@
         <attribute name="correct3" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="correct4" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="correct5" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="question1" optional="YES" attributeType="String"/>
-        <attribute name="question2" optional="YES" attributeType="String"/>
-        <attribute name="question3" optional="YES" attributeType="String"/>
-        <attribute name="question4" optional="YES" attributeType="String"/>
-        <attribute name="question5" optional="YES" attributeType="String"/>
-        <attribute name="questionType" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="userQuiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="userQuiz" inverseEntity="Account"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="224"/>
-        <element name="Feedback" positionX="-54" positionY="36" width="128" height="74"/>
-        <element name="Quiz" positionX="-54" positionY="-9" width="128" height="314"/>
-        <element name="CurrentUser" positionX="-54" positionY="135" width="128" height="44"/>
+        <element name="Account" positionX="-508.8167114257812" positionY="-55.87940979003906" width="128" height="253"/>
+        <element name="Feedback" positionX="-150.6015625" positionY="-77.88653564453125" width="128" height="88"/>
+        <element name="Quiz" positionX="-281.775390625" positionY="-483.0065612792969" width="128" height="253"/>
+        <element name="CurrentUser" positionX="-241.8472900390625" positionY="199.8743896484375" width="128" height="73"/>
+        <element name="AvailableQuiz" positionX="-324" positionY="-315" width="128" height="134"/>
     </elements>
 </model>

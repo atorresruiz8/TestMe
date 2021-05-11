@@ -10,6 +10,8 @@
 		8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */; };
 		8B027CC02649C73900F9FBD5 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B027CBF2649C73900F9FBD5 /* DBHelper.swift */; };
 		8B352E13264ACA17007D2665 /* ViewScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E12264ACA17007D2665 /* ViewScoresViewController.swift */; };
+		8B352E26264AD481007D2665 /* CurrentUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */; };
+		8B352E27264AD481007D2665 /* CurrentUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */; };
 		8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */; };
 		8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */; };
 		8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A302649827B00D688C3 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8B027CBF2649C73900F9FBD5 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		8B352E12264ACA17007D2665 /* ViewScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScoresViewController.swift; sourceTree = "<group>"; };
+		8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrentUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrentUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B8B5A292649827B00D688C3 /* TestMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		8B8B5A202649827B00D688C3 = {
 			isa = PBXGroup;
 			children = (
+				8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */,
+				8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */,
 				8BF780A42649DACC00377D70 /* Account+CoreDataClass copy.swift */,
 				8BF780A52649DACC00377D70 /* Feedback+CoreDataProperties copy.swift */,
 				8BF780A62649DACC00377D70 /* Account+CoreDataProperties copy.swift */,
@@ -255,11 +261,13 @@
 				8B9F07B0264A2C0300474196 /* BlockUsersViewController.swift in Sources */,
 				8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */,
 				8BF780AA2649DACD00377D70 /* Account+CoreDataClass copy.swift in Sources */,
+				8B352E26264AD481007D2665 /* CurrentUser+CoreDataClass.swift in Sources */,
 				8BF780AD2649DACD00377D70 /* Quiz+CoreDataClass copy.swift in Sources */,
 				8BF780AE2649DACD00377D70 /* Feedback+CoreDataClass copy.swift in Sources */,
 				8BF780AC2649DACD00377D70 /* Account+CoreDataProperties copy.swift in Sources */,
 				8BF780AB2649DACD00377D70 /* Feedback+CoreDataProperties copy.swift in Sources */,
 				8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */,
+				8B352E27264AD481007D2665 /* CurrentUser+CoreDataProperties.swift in Sources */,
 				8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */,
 				8B352E13264ACA17007D2665 /* ViewScoresViewController.swift in Sources */,
 				8BF780B12649DE4800377D70 /* SignUpViewController.swift in Sources */,
