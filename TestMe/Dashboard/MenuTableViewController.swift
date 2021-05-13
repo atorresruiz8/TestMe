@@ -8,10 +8,10 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    var textData = ["Profile", "Subscription", "Rankings", "Feedback", "Log Out"]
+    var textData = ["Profile", "Dashboard", "Subscription", "Rankings", "Feedback", "Log Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor.systemGreen
+        tableView.backgroundColor = UIColor.lightGray
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
@@ -31,7 +31,7 @@ class MenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        cell.backgroundColor = UIColor.systemGreen
+        cell.backgroundColor = UIColor.lightGray
 
         cell.textLabel?.text = textData[indexPath.row]
         
@@ -43,28 +43,33 @@ class MenuTableViewController: UITableViewController {
         case 0:
             print("profile selected")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
-                    self.present(newViewController, animated: true, completion: nil)
-//        case 1:
-//            print("subscription selected")
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
-//                    self.present(newViewController, animated: true, completion: nil)
-//        case 2:
-//            print("rankings selected")
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
-//                    self.present(newViewController, animated: true, completion: nil)
-//        case 3:
-//            print("feedback selected")
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
-//                    self.present(newViewController, animated: true, completion: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profile") as! ProfileViewController
+            self.present(newViewController, animated: true, completion: nil)
+        case 1:
+            print("dashboard selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "db") as! DashboardNavigationViewController
+            self.present(newViewController, animated: true, completion: nil)
+        case 2:
+            print("subscription selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "subscription") as! SubscriptionViewController
+            self.present(newViewController, animated: true, completion: nil)
+        case 3:
+            print("rankings selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ranking") as! RankingViewController
+            self.present(newViewController, animated: true, completion: nil)
         case 4:
+            print("feedback selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "feedback") as! FeedbackViewController
+            self.present(newViewController, animated: true, completion: nil)
+        case 5:
             print("logout selected")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginView") as! LoginViewController
-                    self.present(newViewController, animated: true, completion: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "logout") as! LogoutConfirmViewController
+            self.present(newViewController, animated: true, completion: nil)
         default:
             print("error")
         }

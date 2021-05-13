@@ -45,6 +45,7 @@
 		8BF82570264D759300E14961 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8256F264D759300E14961 /* SubscriptionViewController.swift */; };
 		8BF82572264D7E3700E14961 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF82571264D7E3700E14961 /* RankingViewController.swift */; };
 		8BF82574264D847300E14961 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF82573264D847300E14961 /* ProfileViewController.swift */; };
+		8BF82576264DB1F500E14961 /* LogoutConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF82575264DB1F500E14961 /* LogoutConfirmViewController.swift */; };
 		FA612AC4BCA0010D890CEB07 /* Pods_TestMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D2D30582E83284C6A1EF74 /* Pods_TestMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		8BF8256F264D759300E14961 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		8BF82571264D7E3700E14961 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		8BF82573264D847300E14961 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8BF82575264DB1F500E14961 /* LogoutConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutConfirmViewController.swift; sourceTree = "<group>"; };
 		C53A830D235ABB88FD71F7D0 /* Pods-TestMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMe.debug.xcconfig"; path = "Target Support Files/Pods-TestMe/Pods-TestMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				8BF8256D264D73FF00E14961 /* FeedbackViewController.swift */,
 				8BF8256F264D759300E14961 /* SubscriptionViewController.swift */,
 				8BF82571264D7E3700E14961 /* RankingViewController.swift */,
+				8BF82575264DB1F500E14961 /* LogoutConfirmViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				8BF780AD2649DACD00377D70 /* Quiz+CoreDataClass copy.swift in Sources */,
 				8BF780AE2649DACD00377D70 /* Feedback+CoreDataClass copy.swift in Sources */,
 				8BF780AC2649DACD00377D70 /* Account+CoreDataProperties copy.swift in Sources */,
+				8BF82576264DB1F500E14961 /* LogoutConfirmViewController.swift in Sources */,
 				8BF780AB2649DACD00377D70 /* Feedback+CoreDataProperties copy.swift in Sources */,
 				8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */,
 				8B352E2F264B3E59007D2665 /* QuizzViewController.swift in Sources */,
