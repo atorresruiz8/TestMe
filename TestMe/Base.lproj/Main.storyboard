@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J8y-EO-oyE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cTM-Ig-nQO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
@@ -341,10 +341,10 @@
             </objects>
             <point key="canvasLocation" x="4017" y="807"/>
         </scene>
-        <!--View Controller-->
+        <!--Createanswers View Controller-->
         <scene sceneID="aje-Na-hcB">
             <objects>
-                <viewController id="XAf-u3-7Ah" sceneMemberID="viewController">
+                <viewController id="XAf-u3-7Ah" customClass="CreateanswersViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05b-zT-P46">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,36 +387,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Q1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1D-C8-5E9">
-                                <rect key="frame" x="186" y="148" width="21" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Q1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1D-C8-5E9">
+                                <rect key="frame" x="20" y="148" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLO-Qu-aHr">
-                                <rect key="frame" x="186" y="236" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLO-Qu-aHr">
+                                <rect key="frame" x="20" y="236" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-D0-CUX">
-                                <rect key="frame" x="186" y="346" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-D0-CUX">
+                                <rect key="frame" x="20" y="346" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-d8-7eQ">
-                                <rect key="frame" x="186" y="446" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-d8-7eQ">
+                                <rect key="frame" x="20" y="446" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-Nc-1I2">
-                                <rect key="frame" x="186" y="536" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4E-Nc-1I2">
+                                <rect key="frame" x="20" y="536" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -431,7 +431,18 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitAnswers:" destination="XAf-u3-7Ah" eventType="touchUpInside" id="PI5-aC-sDy"/>
                                     <segue destination="jWp-M4-FXY" kind="presentation" modalPresentationStyle="fullScreen" id="ZaZ-91-ZIZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPk-Gt-dlA">
+                                <rect key="frame" x="185" y="756" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteQuiz:" destination="XAf-u3-7Ah" eventType="touchUpInside" id="whl-7T-2wU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -439,6 +450,19 @@
                         <color key="backgroundColor" red="0.32172414129999999" green="0.64707628110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="KB0-vW-bkL"/>
+                    <connections>
+                        <outlet property="answer1" destination="Pyr-O7-4DN" id="Zdc-KH-vzq"/>
+                        <outlet property="answer2" destination="PdR-Sb-CXV" id="DCQ-8d-3aZ"/>
+                        <outlet property="answer3" destination="M6C-5y-mwW" id="Ohj-Yf-yiZ"/>
+                        <outlet property="answer4" destination="Vwi-HG-hII" id="dtt-tL-BmR"/>
+                        <outlet property="answer5" destination="aTu-vH-DPJ" id="622-ns-VfE"/>
+                        <outlet property="categoryLB" destination="iyN-4E-EIN" id="e3R-7d-oDa"/>
+                        <outlet property="question1" destination="f1D-C8-5E9" id="bCw-uh-dEk"/>
+                        <outlet property="question2" destination="aLO-Qu-aHr" id="3zK-iJ-JR3"/>
+                        <outlet property="question3" destination="kSG-D0-CUX" id="iob-mt-kbu"/>
+                        <outlet property="question4" destination="1bN-d8-7eQ" id="RAh-yU-YAK"/>
+                        <outlet property="question5" destination="q4E-Nc-1I2" id="0AU-Fc-yhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2og-ad-8Ql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,10 +682,10 @@
             </objects>
             <point key="canvasLocation" x="4947.826086956522" y="-830.35714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Creat Quiz View Controller-->
         <scene sceneID="Ko4-cq-Dol">
             <objects>
-                <viewController id="cTM-Ig-nQO" sceneMemberID="viewController">
+                <viewController id="cTM-Ig-nQO" customClass="CreatQuizViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="osg-ve-ChX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -732,6 +756,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveQuestions:" destination="cTM-Ig-nQO" eventType="touchUpInside" id="Duz-GY-3JR"/>
                                     <segue destination="XAf-u3-7Ah" kind="presentation" modalPresentationStyle="fullScreen" id="YBJ-fY-M7y"/>
                                 </connections>
                             </button>
@@ -739,6 +764,14 @@
                         <viewLayoutGuide key="safeArea" id="eju-GP-dgG"/>
                         <color key="backgroundColor" red="0.32172414129999999" green="0.64707628110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="category" destination="goZ-ga-tCN" id="9Ee-mS-kpe"/>
+                        <outlet property="question1" destination="TPM-Su-CK0" id="FwQ-gK-8iv"/>
+                        <outlet property="question2" destination="z54-Qt-BZb" id="mOm-3s-QCp"/>
+                        <outlet property="question3" destination="8dp-Fa-sml" id="8it-PL-as7"/>
+                        <outlet property="question4" destination="6Us-jf-JAv" id="6QV-zF-3PT"/>
+                        <outlet property="question5" destination="DEb-95-hTH" id="YAa-Gn-6o5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCA-ak-gU3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

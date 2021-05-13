@@ -20,6 +20,10 @@
 		8B83E0A6264B511E007B476A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A5264B511E007B476A /* DashboardViewController.swift */; };
 		8B83E0A8264B51D6007B476A /* DashboardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */; };
 		8B83E0AA264B5585007B476A /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A9264B5585007B476A /* RankingTableViewCell.swift */; };
+		8B87FC8E264C207000832278 /* CreatQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC8C264C207000832278 /* CreatQuizViewController.swift */; };
+		8B87FC8F264C207000832278 /* CreateanswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC8D264C207000832278 /* CreateanswersViewController.swift */; };
+		8B87FC92264C264A00832278 /* AvailableQuiz+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC91264C264A00832278 /* AvailableQuiz+CoreDataClass.swift */; };
+		8B87FC93264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC90264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift */; };
 		8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */; };
 		8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */; };
 		8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A302649827B00D688C3 /* ViewController.swift */; };
@@ -56,6 +60,10 @@
 		8B83E0A5264B511E007B476A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationViewController.swift; sourceTree = "<group>"; };
 		8B83E0A9264B5585007B476A /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		8B87FC8C264C207000832278 /* CreatQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatQuizViewController.swift; sourceTree = SOURCE_ROOT; };
+		8B87FC8D264C207000832278 /* CreateanswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateanswersViewController.swift; sourceTree = SOURCE_ROOT; };
+		8B87FC90264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AvailableQuiz+CoreDataProperties.swift"; path = "/Users/antoniotorres-ruiz/Documents/Xcode Projects/TestMe/AvailableQuiz+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		8B87FC91264C264A00832278 /* AvailableQuiz+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AvailableQuiz+CoreDataClass.swift"; path = "/Users/antoniotorres-ruiz/Documents/Xcode Projects/TestMe/AvailableQuiz+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		8B8B5A292649827B00D688C3 /* TestMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8B5A2C2649827B00D688C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +139,8 @@
 		8B83E0A4264B5094007B476A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				8B87FC8D264C207000832278 /* CreateanswersViewController.swift */,
+				8B87FC8C264C207000832278 /* CreatQuizViewController.swift */,
 				8B027C9B26498A0100F9FBD5 /* MenuTableViewController.swift */,
 				8B352E30264B3E63007D2665 /* ChooseQuizzTableViewController.swift */,
 				8B352E2E264B3E59007D2665 /* QuizzViewController.swift */,
@@ -143,6 +153,8 @@
 		8B8B5A202649827B00D688C3 = {
 			isa = PBXGroup;
 			children = (
+				8B87FC91264C264A00832278 /* AvailableQuiz+CoreDataClass.swift */,
+				8B87FC90264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift */,
 				8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */,
 				8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */,
 				8BF780A42649DACC00377D70 /* Account+CoreDataClass copy.swift */,
@@ -313,13 +325,16 @@
 				8BF780AF2649DACD00377D70 /* Quiz+CoreDataProperties copy.swift in Sources */,
 				8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */,
 				8B9F07AE264A2A7100474196 /* AdminViewController.swift in Sources */,
+				8B87FC93264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift in Sources */,
 				8B027CC02649C73900F9FBD5 /* DBHelper.swift in Sources */,
 				8B9F07B0264A2C0300474196 /* BlockUsersViewController.swift in Sources */,
 				8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */,
+				8B87FC8E264C207000832278 /* CreatQuizViewController.swift in Sources */,
 				8B83E09B264B4D72007B476A /* ChooseQuizTableViewCell.swift in Sources */,
 				8BF780AA2649DACD00377D70 /* Account+CoreDataClass copy.swift in Sources */,
 				8B83E09F264B4ECE007B476A /* ChooseQuizTableViewCell3.swift in Sources */,
 				8B352E26264AD481007D2665 /* CurrentUser+CoreDataClass.swift in Sources */,
+				8B87FC92264C264A00832278 /* AvailableQuiz+CoreDataClass.swift in Sources */,
 				8BF780AD2649DACD00377D70 /* Quiz+CoreDataClass copy.swift in Sources */,
 				8BF780AE2649DACD00377D70 /* Feedback+CoreDataClass copy.swift in Sources */,
 				8BF780AC2649DACD00377D70 /* Account+CoreDataProperties copy.swift in Sources */,
@@ -330,6 +345,7 @@
 				8B83E0A6264B511E007B476A /* DashboardViewController.swift in Sources */,
 				8B352E27264AD481007D2665 /* CurrentUser+CoreDataProperties.swift in Sources */,
 				8B83E0AA264B5585007B476A /* RankingTableViewCell.swift in Sources */,
+				8B87FC8F264C207000832278 /* CreateanswersViewController.swift in Sources */,
 				8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */,
 				8B352E13264ACA17007D2665 /* ViewScoresViewController.swift in Sources */,
 				8BF780B12649DE4800377D70 /* SignUpViewController.swift in Sources */,
@@ -484,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,6 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
