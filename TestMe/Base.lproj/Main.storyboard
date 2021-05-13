@@ -526,10 +526,10 @@
             </objects>
             <point key="canvasLocation" x="2075.36231884058" y="-830.35714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="abR-X0-REL">
             <objects>
-                <viewController id="qfz-vu-ft5" sceneMemberID="viewController">
+                <viewController id="qfz-vu-ft5" customClass="ProfileViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pcg-bW-Qdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -881,6 +881,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-io-5PY">
+                                <rect key="frame" x="244" y="739" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="wipeUsers:" destination="J8y-EO-oyE" eventType="touchUpInside" id="oct-Xp-9iY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p9R-lr-pb8"/>
                         <color key="backgroundColor" red="0.32172414132556348" green="0.64707628114951432" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

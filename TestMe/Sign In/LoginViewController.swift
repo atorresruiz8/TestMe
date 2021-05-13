@@ -36,7 +36,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
     
     @IBAction func signIn(_ sender: Any) {
         let thisUser = DBHelper.inst.getOneAccount(username: username.text!)
-        //alet curUser = DBHelper.inst.addCurrUser(object: username.text!)
         let data = DBHelper.inst.getAccounts()
         for a in data {
             if (username.text == "admin" && password.text == "admin") { // bring up the special admin page if the username/password combo are correct
@@ -48,6 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
             
             if (username.text == a.username! && password.text == a.password!) { // Verifies that the user credentials are in the core data and lets the user login
                 // instantiate dashboard screen
+                DBHelper.inst.addCurrUser(object: username.text!)
                 let dashboard = self.storyboard?.instantiateViewController(identifier: "db") as! DashboardNavigationViewController
                 dashboard.modalPresentationStyle = .fullScreen
                 self.present(dashboard, animated: true, completion: nil)
@@ -78,4 +78,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         textField.resignFirstResponder()
         return true
     }
+    
+    @IBAction func wipeUsers(_ sender: Any) {
+        DBHelper.inst.wipeAccounts()
+    }
+    
 }

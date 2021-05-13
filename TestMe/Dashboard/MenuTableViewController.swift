@@ -37,6 +37,40 @@ class MenuTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            print("profile selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
+                    self.present(newViewController, animated: true, completion: nil)
+//        case 1:
+//            print("subscription selected")
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
+//                    self.present(newViewController, animated: true, completion: nil)
+//        case 2:
+//            print("rankings selected")
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
+//                    self.present(newViewController, animated: true, completion: nil)
+//        case 3:
+//            print("feedback selected")
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
+//                    self.present(newViewController, animated: true, completion: nil)
+        case 4:
+            print("logout selected")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginView") as! LoginViewController
+                    self.present(newViewController, animated: true, completion: nil)
+        default:
+            print("error")
+        }
+        
+
+    }
 
     /*
     // Override to support conditional editing of the table view.

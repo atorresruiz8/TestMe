@@ -84,17 +84,37 @@ class DBHelper {
         }
     }
     
-    func addCurrUser(object: String) { // adds a current user object to the coredata
-        let currUser = NSEntityDescription.insertNewObject(forEntityName: "CurrentUser", into: context!) as! CurrentUser
-        currUser.username = object
+    func addCurrUser(object: String) { // changes object in curruser
+//        let currUser = NSEntityDescription.insertNewObject(forEntityName: "CurrentUser", into: context!) as! CurrentUser
+        var cUser : [CurrentUser] = []
+        do{
+            cUser = try context!.fetch(CurrentUser.fetchRequest())
+        }
+        catch{
+            print("error")
+        }
+        
+        cUser[0].username = object
         
         do {
             try context?.save()
-            print("Current user is", currUser.username!)
+            print("Current user is", cUser[0].username!)
         } catch {
             print("Username not passed properly.")
         }
     }
+    func getCurrUser()-> String{
+        var cUser : [CurrentUser] = []
+        do{
+            cUser = try context!.fetch(CurrentUser.fetchRequest())
+        }
+        catch{
+            print("error")
+        }
+        print("hi")
+        return cUser[0].username!
+    }
+    
     //add questions to database
     func addQuestions(object : [String:String]) {
         let quiz = NSEntityDescription.insertNewObject(forEntityName: "AvailableQuiz", into: context!) as! AvailableQuiz
@@ -146,27 +166,23 @@ class DBHelper {
         return a!
     }
     
-    func getLastOne()->[AvailableQuiz] {
-        var aq = [AvailableQuiz]()
-        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "AvailableQuiz")
-        
-        // add sort descriptor
-        let sd = NSSortDescriptor(key: "question", ascending: false)
-        fetchReq.sortDescriptors = [sd]
-        fetchReq.fetchLimit = 1
-        
-        do {
-            aq = try context!.fetch(fetchReq) as! [AvailableQuiz]
-            
-            for record in aq {
-                print(aq)
-            }
-        } catch {
-            print(error)
-        }
-        
-        return aq
-    }
+//    func getLastOne()->[AvailableQuiz] {
+//        var aq = [AvailableQuiz]()
+//        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "AvailableQuiz")
+//
+//        // add sort descriptor
+//        let sd = NSSortDescriptor(key: "question", ascending: false)
+//        fetchReq.sortDescriptors = [sd]
+//        fetchReq.fetchLimit = 1
+//
+//        do {
+//            aq = try context!.fetch(fetchReq) as! [AvailableQuiz]
+//        } catch {
+//            print(error)
+//        }
+//
+//        return aq
+//    }
     
     func wipeActiveQuiz() { // wipes the core data clean
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AvailableQuiz")

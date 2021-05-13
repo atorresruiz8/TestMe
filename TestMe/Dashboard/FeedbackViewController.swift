@@ -17,6 +17,8 @@ class FeedbackViewController: UIViewController {
     }
     
     @IBAction func submitFeedback(_ sender: Any) {
+        let cUser = DBHelper.inst.getCurrUser()
+        let user = DBHelper.inst.getOneAccount(username: cUser)
         // create the alert
         let alert = UIAlertController(title: "Feedback Received", message: "Thank you for submitting. We are grateful for your comments.", preferredStyle: UIAlertController.Style.alert)
         
@@ -25,7 +27,9 @@ class FeedbackViewController: UIViewController {
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
+        
         // get current user and set its feedback attribute to this input
+        user.feedback = feedback.text
         
         feedback.text = "" // clear it so they can input more again
     }

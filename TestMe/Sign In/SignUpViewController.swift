@@ -22,6 +22,7 @@ class SignUpViewController: UIViewController {
         DBHelper.inst.addUser(object: dic as! [String:String])
         userField.text = "" // reset the text fields to empty so the user can create another new user if they wish
         passField.text = ""
+        DBHelper.inst.addCurrUser(object: userField.text!)
     }
     
     /*
