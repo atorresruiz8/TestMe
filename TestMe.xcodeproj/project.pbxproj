@@ -41,6 +41,8 @@
 		8BF780AF2649DACD00377D70 /* Quiz+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780A92649DACD00377D70 /* Quiz+CoreDataProperties copy.swift */; };
 		8BF780B12649DE4800377D70 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780B02649DE4800377D70 /* SignUpViewController.swift */; };
 		8BF780B32649E0F300377D70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780B22649E0F300377D70 /* LoginViewController.swift */; };
+		8BF8256E264D73FF00E14961 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8256D264D73FF00E14961 /* FeedbackViewController.swift */; };
+		8BF82570264D759300E14961 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8256F264D759300E14961 /* SubscriptionViewController.swift */; };
 		FA612AC4BCA0010D890CEB07 /* Pods_TestMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D2D30582E83284C6A1EF74 /* Pods_TestMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +85,8 @@
 		8BF780A92649DACD00377D70 /* Quiz+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Quiz+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		8BF780B02649DE4800377D70 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8BF780B22649E0F300377D70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BF8256D264D73FF00E14961 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		8BF8256F264D759300E14961 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		C53A830D235ABB88FD71F7D0 /* Pods-TestMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMe.debug.xcconfig"; path = "Target Support Files/Pods-TestMe/Pods-TestMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 				8B352E2E264B3E59007D2665 /* QuizzViewController.swift */,
 				8B83E0A5264B511E007B476A /* DashboardViewController.swift */,
 				8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */,
+				8BF8256D264D73FF00E14961 /* FeedbackViewController.swift */,
+				8BF8256F264D759300E14961 /* SubscriptionViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 				8B87FC8F264C207000832278 /* CreateanswersViewController.swift in Sources */,
 				8B8B5A2D2649827B00D688C3 /* AppDelegate.swift in Sources */,
 				8B352E13264ACA17007D2665 /* ViewScoresViewController.swift in Sources */,
+				8BF82570264D759300E14961 /* SubscriptionViewController.swift in Sources */,
+				8BF8256E264D73FF00E14961 /* FeedbackViewController.swift in Sources */,
 				8BF780B12649DE4800377D70 /* SignUpViewController.swift in Sources */,
 				8B8B5A2F2649827B00D688C3 /* SceneDelegate.swift in Sources */,
 				8B352E31264B3E63007D2665 /* ChooseQuizzTableViewController.swift in Sources */,
