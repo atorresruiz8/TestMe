@@ -125,6 +125,7 @@ class DBHelper {
         quiz.q4 = object["q4"]
         quiz.q5 = object["q5"]
         quiz.category = object["category"]
+        quiz.questionType = object["questionType"]
         do {
             try context?.save()
             //print(quiz.q1!)

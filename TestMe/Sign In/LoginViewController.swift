@@ -15,6 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet var background: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +26,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         username.delegate = self
         password.delegate = self
         
-        // if we want to have rounded buttons, make an outlet for each button and change 'loginButton' here to the name of the outlet
-//        loginButton.layer.borderWidth = 4
-//        loginButton.layer.cornerRadius = 10.0
-//        loginButton.layer.cornerCurve = .continuous
+        // rounded buttons
+        loginButton.layer.cornerRadius = 10.0
+        loginButton.layer.cornerCurve = .continuous
+        signUpButton.layer.cornerRadius = 10.0
+        signUpButton.layer.cornerCurve = .continuous
+        
+        // Create a gradient layer
+        let gradientLayer = CAGradientLayer()
+        
+        // Set the size of the layer to be equal to the size of the display
+        gradientLayer.frame = view.bounds
+        
+        // Set an array of CGColors to create the gradient
+        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1).cgColor, UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 1).cgColor]
+        
+        // Rasterize this layer to improve perfromance
+        gradientLayer.shouldRasterize = true
+        
+        // Apply the gradient to the background
+        background.layer.insertSublayer(gradientLayer, at: 0)
+        
+        // Diagonal: top left to bottom corner
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
+        
         
         if (sw.isOn) { // if the switch is on, remember the last username/password combo entered and automatically enter it for the user
             username.text = ud.string(forKey: "username")
@@ -79,8 +103,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         return true
     }
     
-    @IBAction func wipeUsers(_ sender: Any) {
-        DBHelper.inst.wipeAccounts()
-    }
+    //testing purposes
+//    @IBAction func wipeUsers(_ sender: Any) {
+//        DBHelper.inst.wipeAccounts()
+//    }
     
 }

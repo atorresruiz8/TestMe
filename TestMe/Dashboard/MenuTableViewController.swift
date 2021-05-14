@@ -8,10 +8,11 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    var textData = ["Profile", "Dashboard", "Subscription", "Rankings", "Feedback", "Discussion", "Log Out"]
+    var textData = ["Profile", "Dashboard", "Subscription", "Rankings", "Feedback", "Log Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor.lightGray
+        //tableView.backgroundColor = UIColor.init(red: 0, green: 84, blue: 147, alpha: 1.0)
+        tableView.backgroundColor = UIColor.systemTeal
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
@@ -31,8 +32,7 @@ class MenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        cell.backgroundColor = UIColor.lightGray
-
+        cell.backgroundColor = UIColor.systemTeal
         cell.textLabel?.text = textData[indexPath.row]
         
         return cell
@@ -66,8 +66,6 @@ class MenuTableViewController: UITableViewController {
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "feedback") as! FeedbackViewController
             self.present(newViewController, animated: true, completion: nil)
         case 5:
-            print("discussion selected")
-        case 6:
             print("logout selected")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "logout") as! LogoutConfirmViewController
@@ -75,9 +73,32 @@ class MenuTableViewController: UITableViewController {
         default:
             print("error")
         }
-        
 
     }
+    
+//    func setTableviewBackgroundGradient() {
+//        // Create a gradient layer
+//        let gradientLayer = CAGradientLayer()
+//
+//        // Set the size of the layer to be equal to the size of the display
+//        gradientLayer.frame = view.bounds
+//
+//        // Set an array of CGColors to create the gradient
+//        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1).cgColor, UIColor(red: 50/255, green: 180/255, blue: 150/255, alpha: 1).cgColor]
+//
+//        // Rasterize this layer to improve perfromance
+//        gradientLayer.shouldRasterize = true
+//
+//        // Apply the gradient to the background
+//       //background.layer.insertSublayer(gradientLayer, at: 0)
+//        let backgroundView = UIView(frame: tableView.bounds)
+//        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+//        tableView.backgroundView = backgroundView
+//    }
+//
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.backgroundColor = UIColor.clear
+//    }
 
     /*
     // Override to support conditional editing of the table view.

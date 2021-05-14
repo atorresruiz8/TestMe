@@ -34,7 +34,6 @@
 		8B8B5A3C2649827E00D688C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A3A2649827E00D688C3 /* LaunchScreen.storyboard */; };
 		8B9F07AE264A2A7100474196 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F07AD264A2A7100474196 /* AdminViewController.swift */; };
 		8B9F07B0264A2C0300474196 /* BlockUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F07AF264A2C0300474196 /* BlockUsersViewController.swift */; };
-		8BDC8E1B264ECD010074A2B8 /* ForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC8E1A264ECD010074A2B8 /* ForumViewController.swift */; };
 		8BF780AA2649DACD00377D70 /* Account+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780A42649DACC00377D70 /* Account+CoreDataClass copy.swift */; };
 		8BF780AB2649DACD00377D70 /* Feedback+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780A52649DACC00377D70 /* Feedback+CoreDataProperties copy.swift */; };
 		8BF780AC2649DACD00377D70 /* Account+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF780A62649DACC00377D70 /* Account+CoreDataProperties copy.swift */; };
@@ -83,7 +82,6 @@
 		8B8B5A3D2649827E00D688C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9F07AD264A2A7100474196 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		8B9F07AF264A2C0300474196 /* BlockUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUsersViewController.swift; sourceTree = "<group>"; };
-		8BDC8E1A264ECD010074A2B8 /* ForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumViewController.swift; sourceTree = "<group>"; };
 		8BF780A42649DACC00377D70 /* Account+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		8BF780A52649DACC00377D70 /* Feedback+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Feedback+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		8BF780A62649DACC00377D70 /* Account+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				8BF82571264D7E3700E14961 /* RankingViewController.swift */,
 				8B217EC6264E215F00EDA375 /* CreateRandomAnswersViewController.swift */,
 				8BF82575264DB1F500E14961 /* LogoutConfirmViewController.swift */,
-				8BDC8E1A264ECD010074A2B8 /* ForumViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				8B83E09B264B4D72007B476A /* ChooseQuizTableViewCell.swift in Sources */,
 				8BF780AA2649DACD00377D70 /* Account+CoreDataClass copy.swift in Sources */,
 				8B83E09F264B4ECE007B476A /* ChooseQuizTableViewCell3.swift in Sources */,
-				8BDC8E1B264ECD010074A2B8 /* ForumViewController.swift in Sources */,
 				8B352E26264AD481007D2665 /* CurrentUser+CoreDataClass.swift in Sources */,
 				8B87FC92264C264A00832278 /* AvailableQuiz+CoreDataClass.swift in Sources */,
 				8BF780AD2649DACD00377D70 /* Quiz+CoreDataClass copy.swift in Sources */,
