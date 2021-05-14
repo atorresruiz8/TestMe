@@ -205,7 +205,24 @@ class DBHelper {
         answer.a3 = object["a3"]
         answer.a4 = object["a4"]
         answer.a5 = object["a5"]
-       // answer.category = object["category"]
+        
+        answer.r1 = object["r1"]
+        answer.r2 = object["r2"]
+        answer.r3 = object["r3"]
+        answer.r4 = object["r4"]
+        answer.r5 = object["r5"]
+        answer.r6 = object["r6"]
+        answer.r7 = object["r7"]
+        answer.r8 = object["r8"]
+        answer.r9 = object["r9"]
+        answer.r10 = object["r10"]
+        answer.r11 = object["r11"]
+        answer.r12 = object["r12"]
+        answer.r13 = object["r13"]
+        answer.r14 = object["r14"]
+        answer.r15 = object["r15"]
+        answer.category = object["category"]
+
         do {
             try context?.save()
             

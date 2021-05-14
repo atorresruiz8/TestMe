@@ -35,5 +35,20 @@ extension Quiz {
     @NSManaged public var questionType: String?
     @NSManaged public var score: Double
     @NSManaged public var userQuiz: Account?
+    @NSManaged public var r1: String?
+    @NSManaged public var r2: String?
+    @NSManaged public var r3: String?
+    @NSManaged public var r4: String?
+    @NSManaged public var r5: String?
+    @NSManaged public var r6: String?
+    @NSManaged public var r7: String?
+    @NSManaged public var r8: String?
+    @NSManaged public var r9: String?
+    @NSManaged public var r10: String?
+    @NSManaged public var r11: String?
+    @NSManaged public var r12: String?
+    @NSManaged public var r13: String?
+    @NSManaged public var r14: String?
+    @NSManaged public var r15: String?
 
 }

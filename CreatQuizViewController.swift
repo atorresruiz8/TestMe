@@ -16,6 +16,7 @@ class CreatQuizViewController: UIViewController {
     @IBOutlet weak var question3: UITextField!
     @IBOutlet weak var question2: UITextField!
     
+    @IBOutlet weak var questionType: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
