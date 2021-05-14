@@ -87,13 +87,14 @@ class DBHelper {
     func addCurrUser(object: String) { // changes object in curruser
 //        let currUser = NSEntityDescription.insertNewObject(forEntityName: "CurrentUser", into: context!) as! CurrentUser
         var cUser : [CurrentUser] = []
-        do{
-            cUser = try context!.fetch(CurrentUser.fetchRequest())
-        }
-        catch{
-            print("error")
-        }
-        
+        cUser.append(NSEntityDescription.insertNewObject(forEntityName: "CurrentUser", into: context!) as! CurrentUser)
+//        do{
+//            cUser = try context!.fetch(CurrentUser.fetchRequest())
+//        }
+//        catch{
+//            print("error")
+//        }
+//
         cUser[0].username = object
         
         do {
@@ -111,8 +112,8 @@ class DBHelper {
         catch{
             print("error")
         }
-        print("hi")
-        return cUser[0].username!
+        print(cUser[cUser.count-1].username!)
+        return cUser[cUser.count-1].username!
     }
     
     //add questions to database
@@ -240,5 +241,27 @@ class DBHelper {
         }
         
         return a
+    }
+    
+    func addTestUser(object : [String:String], scores : Double) { // adds the username and login info to the core data
+        let user = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+        user.username = "test"
+        user.password = "test"
+        user.blockedStatus = false
+        user.subscriptionStatus = "none"
+        user.adminRole = false
+        user.feedback = ""
+        user.quizzesTaken = 4.0
+        user.scoreOne = scores
+        user.scoreTwo = scores
+        user.scoreThree = scores
+        user.scoreFour = scores
+
+        do {
+            try context?.save()
+//            print("User created with username:", user.username!, "and password:", user.password!)
+        } catch {
+            print("Account not created.")
+        }
     }
 }

@@ -340,6 +340,42 @@
             </objects>
             <point key="canvasLocation" x="4015.9420289855075" y="806.91964285714278"/>
         </scene>
+        <!--Forum View Controller-->
+        <scene sceneID="Cys-Ms-IKx">
+            <objects>
+                <viewController storyboardIdentifier="forum" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XbY-wb-lPY" customClass="ForumViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V5m-5W-yji">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vzy-Cd-dSt">
+                                <rect key="frame" x="0.0" y="55" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Discussion" id="sY3-gP-u6R">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Yb7-Kq-qzm">
+                                            <connections>
+                                                <segue destination="wVh-C7-pZ0" kind="presentation" modalPresentationStyle="fullScreen" id="N6t-7n-dK9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQC-SN-tu9">
+                                <rect key="frame" x="20" y="804" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dUi-cK-Tw6"/>
+                        <color key="backgroundColor" red="0.32172414129999999" green="0.64707628110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OwZ-LG-9xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5195.652173913044" y="806.91964285714278"/>
+        </scene>
         <!--Createanswers View Controller-->
         <scene sceneID="aje-Na-hcB">
             <objects>
@@ -470,7 +506,7 @@
         <!--Subscription View Controller-->
         <scene sceneID="z1L-6b-k5b">
             <objects>
-                <viewController id="hBR-Ms-DwA" customClass="SubscriptionViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subscription" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hBR-Ms-DwA" customClass="SubscriptionViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BFm-YK-DIQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -531,12 +567,12 @@
         <!--Profile View Controller-->
         <scene sceneID="abR-X0-REL">
             <objects>
-                <viewController id="qfz-vu-ft5" customClass="ProfileViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qfz-vu-ft5" customClass="ProfileViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pcg-bW-Qdc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVb-VM-cyo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="XVb-VM-cyo">
                                 <rect key="frame" x="87" y="182" width="240" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -581,6 +617,12 @@
                         <viewLayoutGuide key="safeArea" id="Rxv-wL-GOB"/>
                         <color key="backgroundColor" red="0.32172414129999999" green="0.64707628110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="rank" destination="tCP-Wm-OYN" id="PCc-0R-zx5"/>
+                        <outlet property="score" destination="pvY-M8-fqz" id="X0k-xI-q64"/>
+                        <outlet property="userIcon" destination="XVb-VM-cyo" id="v1b-Ma-EX3"/>
+                        <outlet property="username" destination="gYu-qU-kwe" id="esl-Cl-Tvs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnG-Wt-iXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -589,7 +631,7 @@
         <!--Ranking View Controller-->
         <scene sceneID="1aM-dh-GUT">
             <objects>
-                <viewController id="UxD-mJ-TpB" customClass="RankingViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ranking" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UxD-mJ-TpB" customClass="RankingViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zcU-nM-dq4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -633,9 +675,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="name" destination="Qea-Uc-J9C" id="06y-8U-tmS"/>
-                                            <outlet property="rank" destination="viQ-sa-x2W" id="AtK-U1-isO"/>
-                                            <outlet property="score" destination="dRw-ow-g3M" id="WZr-6A-IPw"/>
+                                            <outlet property="name" destination="Qea-Uc-J9C" id="n9s-0N-AzI"/>
+                                            <outlet property="rank" destination="viQ-sa-x2W" id="pRb-Qa-4Il"/>
+                                            <outlet property="score" destination="dRw-ow-g3M" id="3u1-1b-GXD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -657,6 +699,9 @@
                         <viewLayoutGuide key="safeArea" id="nQ9-dN-nds"/>
                         <color key="backgroundColor" red="0.32172414129999999" green="0.64707628110000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="EwJ-yv-Vy3" id="9aq-sN-b0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vK5-Md-cfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -665,7 +710,7 @@
         <!--Feedback View Controller-->
         <scene sceneID="LHZ-Gr-WN9">
             <objects>
-                <viewController id="2Ku-eV-BdG" customClass="FeedbackViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="feedback" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ku-eV-BdG" customClass="FeedbackViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a1L-h7-jac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1090,6 +1135,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFN-85-heo">
+                                <rect key="frame" x="286" y="759" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="wipeUsers:" destination="J8y-EO-oyE" eventType="touchUpInside" id="BJj-SE-UWN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p9R-lr-pb8"/>
                         <color key="backgroundColor" red="0.32172414132556348" green="0.64707628114951432" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1425,12 +1478,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="P2W-fy-AAT"/>
-        <segue reference="jeB-Ld-0Cm"/>
+        <segue reference="eoL-X9-fGG"/>
         <segue reference="w6j-IT-eh9"/>
         <segue reference="qMS-CH-M1F"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Profile" width="240" height="240"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

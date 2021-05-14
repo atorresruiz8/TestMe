@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    var textData = ["Profile", "Dashboard", "Subscription", "Rankings", "Feedback", "Log Out"]
+    var textData = ["Profile", "Dashboard", "Subscription", "Rankings", "Feedback", "Discussion", "Log Out"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.lightGray
@@ -66,6 +66,8 @@ class MenuTableViewController: UITableViewController {
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "feedback") as! FeedbackViewController
             self.present(newViewController, animated: true, completion: nil)
         case 5:
+            print("discussion selected")
+        case 6:
             print("logout selected")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "logout") as! LogoutConfirmViewController

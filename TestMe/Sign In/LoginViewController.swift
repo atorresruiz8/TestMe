@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
             
             if (username.text == a.username! && password.text == a.password!) { // Verifies that the user credentials are in the core data and lets the user login
                 // instantiate dashboard screen
-                //DBHelper.inst.addCurrUser(object: username.text!)
+                DBHelper.inst.addCurrUser(object: username.text!)
                 let dashboard = self.storyboard?.instantiateViewController(identifier: "db") as! DashboardNavigationViewController
                 dashboard.modalPresentationStyle = .fullScreen
                 self.present(dashboard, animated: true, completion: nil)

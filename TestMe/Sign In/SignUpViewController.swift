@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
-        //DBHelper.inst.addCurrUser(object: userField.text!)
+        DBHelper.inst.addCurrUser(object: userField.text!)
     }
     
     /*
