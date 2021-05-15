@@ -38,6 +38,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLg-69-V5l">
                                         <rect key="frame" x="193" y="8" width="167" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadPythonQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Uv-YB-JEm"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="C++" translatesAutoresizingMaskIntoConstraints="NO" id="kH3-3q-bCG">
                                         <rect key="frame" x="8" y="168" width="167" height="151"/>
@@ -46,6 +49,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zty-qV-JDS">
                                         <rect key="frame" x="8" y="167" width="167" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadCPlusPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKr-Fl-T4e"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Swift" translatesAutoresizingMaskIntoConstraints="NO" id="FHZ-eG-3Or">
                                         <rect key="frame" x="193" y="168" width="173" height="151"/>
@@ -54,6 +60,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-kz-joQ">
                                         <rect key="frame" x="207" y="167" width="147" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadSwiftQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Od3-SF-Oa4"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="C" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-K3-z9w">
                                         <rect key="frame" x="8" y="327" width="167" height="144"/>
@@ -62,6 +71,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CH-CH-wPw">
                                         <rect key="frame" x="32" y="335" width="117" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadCQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bso-PC-yP4"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SQL" translatesAutoresizingMaskIntoConstraints="NO" id="GFY-41-5eX">
                                         <rect key="frame" x="193" y="327" width="173" height="144"/>
@@ -70,10 +82,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-hM-ZZx">
                                         <rect key="frame" x="212" y="335" width="133" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadSQLQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCj-dv-gwB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Man-tY-Koz">
                                         <rect key="frame" x="8" y="8" width="167" height="152"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="loadJavaQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bp-7A-9mx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -300,7 +318,7 @@
         <!--Quizz View Controller-->
         <scene sceneID="xFn-WG-ejk">
             <objects>
-                <viewController id="YXY-NB-Zc3" customClass="QuizzViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quiz" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YXY-NB-Zc3" customClass="QuizzViewController" customModule="TestMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vUb-XY-wFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
