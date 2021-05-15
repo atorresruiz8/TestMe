@@ -72,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
             if (username.text == a.username! && password.text == a.password!) { // Verifies that the user credentials are in the core data and lets the user login
                 // instantiate dashboard screen
                 DBHelper.inst.addCurrUser(object: username.text!)
-                let dashboard = self.storyboard?.instantiateViewController(identifier: "db") as! DashboardNavigationViewController
+                let dashboard = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
                 dashboard.modalPresentationStyle = .fullScreen
                 self.present(dashboard, animated: true, completion: nil)
             } else if (thisUser.blockedStatus == true) {
@@ -96,6 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         sw.isOn = ud.bool(forKey: "mySwitchValue")
         username.text = ud.string(forKey: "username")
         password.text = ud.string(forKey: "password")
+        DBHelper.inst.addTestUser(object: ["test1":"test1"], scores: 1)
     }
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // used to make it so the user can push the return key on the keyboard to exit out of keyboard input

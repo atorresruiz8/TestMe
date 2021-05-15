@@ -47,7 +47,7 @@ class LogoutConfirmViewController: UIViewController {
     }
     
     @IBAction func goBackToDashboard(_ sender: Any) {
-        let db = self.storyboard?.instantiateViewController(identifier: "db") as! DashboardNavigationViewController
+        let db = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
         db.modalPresentationStyle = .fullScreen
         self.present(db, animated: true, completion: nil)
     }

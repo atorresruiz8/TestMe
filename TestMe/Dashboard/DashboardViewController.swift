@@ -9,6 +9,7 @@ import UIKit
 import SideMenu
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var menuBut: UIButton!
     @IBOutlet weak var welcomeTitle: UILabel!
     @IBOutlet var background: UIView!
     var menu : SideMenuNavigationController?
@@ -35,6 +36,9 @@ class DashboardViewController: UIViewController {
         
         // Apply the gradient to the background
         background.layer.insertSublayer(gradientLayer, at: 0)
+        
+        menuBut.layer.cornerRadius = 10.0
+        menuBut.layer.cornerCurve = .continuous
     }
 
     @IBAction func didTap(_ sender: Any) {

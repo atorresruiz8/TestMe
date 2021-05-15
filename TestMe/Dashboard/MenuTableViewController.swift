@@ -48,7 +48,7 @@ class MenuTableViewController: UITableViewController {
         case 1:
             print("dashboard selected")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "db") as! DashboardNavigationViewController
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! DashboardViewController
             self.present(newViewController, animated: true, completion: nil)
         case 2:
             print("subscription selected")

@@ -19,7 +19,6 @@
 		8B83E09D264B4EC2007B476A /* ChooseQuizTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E09C264B4EC2007B476A /* ChooseQuizTableViewCell2.swift */; };
 		8B83E09F264B4ECE007B476A /* ChooseQuizTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E09E264B4ECE007B476A /* ChooseQuizTableViewCell3.swift */; };
 		8B83E0A6264B511E007B476A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A5264B511E007B476A /* DashboardViewController.swift */; };
-		8B83E0A8264B51D6007B476A /* DashboardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */; };
 		8B83E0AA264B5585007B476A /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A9264B5585007B476A /* RankingTableViewCell.swift */; };
 		8B87FC8E264C207000832278 /* CreatQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC8C264C207000832278 /* CreatQuizViewController.swift */; };
 		8B87FC8F264C207000832278 /* CreateanswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B87FC8D264C207000832278 /* CreateanswersViewController.swift */; };
@@ -65,7 +64,6 @@
 		8B83E09C264B4EC2007B476A /* ChooseQuizTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuizTableViewCell2.swift; sourceTree = "<group>"; };
 		8B83E09E264B4ECE007B476A /* ChooseQuizTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuizTableViewCell3.swift; sourceTree = "<group>"; };
 		8B83E0A5264B511E007B476A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardNavigationViewController.swift; sourceTree = "<group>"; };
 		8B83E0A9264B5585007B476A /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
 		8B87FC8C264C207000832278 /* CreatQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatQuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		8B87FC8D264C207000832278 /* CreateanswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateanswersViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -158,7 +156,6 @@
 				8B352E30264B3E63007D2665 /* ChooseQuizzTableViewController.swift */,
 				8B352E2E264B3E59007D2665 /* QuizzViewController.swift */,
 				8B83E0A5264B511E007B476A /* DashboardViewController.swift */,
-				8B83E0A7264B51D6007B476A /* DashboardNavigationViewController.swift */,
 				8BF8256D264D73FF00E14961 /* FeedbackViewController.swift */,
 				8BF8256F264D759300E14961 /* SubscriptionViewController.swift */,
 				8BF82571264D7E3700E14961 /* RankingViewController.swift */,
@@ -360,7 +357,6 @@
 				8BF780AB2649DACD00377D70 /* Feedback+CoreDataProperties copy.swift in Sources */,
 				8B027C9C26498A0100F9FBD5 /* MenuTableViewController.swift in Sources */,
 				8B352E2F264B3E59007D2665 /* QuizzViewController.swift in Sources */,
-				8B83E0A8264B51D6007B476A /* DashboardNavigationViewController.swift in Sources */,
 				8B83E0A6264B511E007B476A /* DashboardViewController.swift in Sources */,
 				8B352E27264AD481007D2665 /* CurrentUser+CoreDataProperties.swift in Sources */,
 				8B83E0AA264B5585007B476A /* RankingTableViewCell.swift in Sources */,
