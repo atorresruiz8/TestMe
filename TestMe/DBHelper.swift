@@ -266,8 +266,8 @@ class DBHelper {
     
     func addTestUser(object : [String:String], scores : Double) { // adds the username and login info to the core data
         let user = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        user.username = "admin"
-        user.password = "admin"
+        user.username = "test"
+        user.password = "test"
         user.blockedStatus = false
         user.subscriptionStatus = "none"
         user.adminRole = false

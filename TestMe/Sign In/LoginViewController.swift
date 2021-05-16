@@ -27,9 +27,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         password.delegate = self
         
         // rounded buttons
-        loginButton.layer.cornerRadius = 10.0
+        loginButton.layer.cornerRadius = 15.0
         loginButton.layer.cornerCurve = .continuous
-        signUpButton.layer.cornerRadius = 10.0
+        signUpButton.layer.cornerRadius = 15.0
         signUpButton.layer.cornerCurve = .continuous
         
         // Create a gradient layer
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         gradientLayer.frame = view.bounds
         
         // Set an array of CGColors to create the gradient
-        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1).cgColor, UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 1).cgColor]
+        gradientLayer.colors = [#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor, UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 1).cgColor]
         
         // Rasterize this layer to improve perfromance
         gradientLayer.shouldRasterize = true
@@ -96,7 +96,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         sw.isOn = ud.bool(forKey: "mySwitchValue")
         username.text = ud.string(forKey: "username")
         password.text = ud.string(forKey: "password")
-        DBHelper.inst.addTestUser(object: ["test1":"test1"], scores: 1)
     }
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // used to make it so the user can push the return key on the keyboard to exit out of keyboard input

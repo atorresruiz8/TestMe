@@ -1,17 +1,17 @@
 //
-//  LogoutConfirmViewController.swift
+//  ForgotPasswordViewController.swift
 //  TestMe
 //
-//  Created by Antonio Torres-Ruiz on 5/13/21.
+//  Created by Antonio Torres-Ruiz on 5/15/21.
 //
 
 import UIKit
 
-class LogoutConfirmViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
-    @IBOutlet weak var noBut: UIButton!
-    @IBOutlet weak var yesBut: UIButton!
+    @IBOutlet weak var requestBut: UIButton!
     @IBOutlet var background: UIView!
+    @IBOutlet weak var userName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,24 +36,21 @@ class LogoutConfirmViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
         gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
         
-        yesBut.layer.cornerRadius = 10.0
-        yesBut.layer.cornerCurve = .continuous
+        requestBut.layer.cornerRadius = 15.0
+        requestBut.layer.cornerCurve = .continuous
+    }
+    
+    @IBAction func displayPassword(_ sender: Any) {
+        let data = DBHelper.inst.getOneAccount(username: userName.text!)
+        userName.text = ""
+        // create the alert
+        let alert = UIAlertController(title: "Password Request", message: "Your password is \(data.password!)! Thank you for signing up with us.", preferredStyle: UIAlertController.Style.alert)
         
-        noBut.layer.cornerRadius = 10.0
-        noBut.layer.cornerCurve = .continuous
-    }
-    
-
-    @IBAction func logOutConfirmed(_ sender: Any) {
-        let login = self.storyboard?.instantiateViewController(identifier: "login") as! LoginViewController
-        login.modalPresentationStyle = .fullScreen
-        self.present(login, animated: true, completion: nil)
-    }
-    
-    @IBAction func goBackToDashboard(_ sender: Any) {
-        let db = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
-        db.modalPresentationStyle = .fullScreen
-        self.present(db, animated: true, completion: nil)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     /*

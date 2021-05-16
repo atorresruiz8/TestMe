@@ -12,6 +12,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var welcomeTitle: UILabel!
     @IBOutlet var background: UIView!
     var menu : SideMenuNavigationController?
+    static var cat = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,42 +46,87 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func loadJavaQuiz(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if(a.category == "Java"){
+                DashboardViewController.cat = a.category!
+                    let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                    quiz.modalPresentationStyle = .fullScreen
+                    self.present(quiz, animated: true, completion: nil)
+                print(DashboardViewController.cat)
+            }
+          
+            
+        }
+        
     }
     
     
     @IBAction func loadPythonQuiz(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if (a.category == "IOS"){
+                DashboardViewController.cat = a.category!
+                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                quiz.modalPresentationStyle = .fullScreen
+                self.present(quiz, animated: true, completion: nil)
+            }
+       
+        }
     }
     
     @IBAction func loadCPlusPlus(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if (a.category == "cop"){
+                DashboardViewController.cat = a.category!
+                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                quiz.modalPresentationStyle = .fullScreen
+                self.present(quiz, animated: true, completion: nil)
+            }
+       
+        }
     }
     
     @IBAction func loadSwiftQuiz(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if (a.category == "swift"){
+                DashboardViewController.cat = a.category!
+                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                quiz.modalPresentationStyle = .fullScreen
+                self.present(quiz, animated: true, completion: nil)
+            }
+       
+        }
     }
     
     
     @IBAction func loadCQuiz(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if (a.category == "c"){
+                DashboardViewController.cat = a.category!
+                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                quiz.modalPresentationStyle = .fullScreen
+                self.present(quiz, animated: true, completion: nil)
+            }
+       
+        }
     }
     
     
     @IBAction func loadSQLQuiz(_ sender: Any) {
-        let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-        quiz.modalPresentationStyle = .fullScreen
-        self.present(quiz, animated: true, completion: nil)
+        let data = DBHelper.inst.getQuestions()
+        for a in data {
+            if (a.category == "sql"){
+                DashboardViewController.cat = a.category!
+                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
+                quiz.modalPresentationStyle = .fullScreen
+                self.present(quiz, animated: true, completion: nil)
+            }
+       
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

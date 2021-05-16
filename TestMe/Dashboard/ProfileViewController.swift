@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         username.text = "Welcome, \(cUser)!"
         super.viewDidLoad()
+      
         // Do any additional setup after loading the view.
         
         // Create a gradient layer
@@ -28,13 +29,17 @@ class ProfileViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         // Set an array of CGColors to create the gradient
-        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1).cgColor, UIColor(red: 50/255, green: 180/255, blue: 150/255, alpha: 1).cgColor]
+        gradientLayer.colors = [#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor, UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 1).cgColor]
         
         // Rasterize this layer to improve perfromance
         gradientLayer.shouldRasterize = true
         
         // Apply the gradient to the background
         background.layer.insertSublayer(gradientLayer, at: 0)
+        
+        // Diagonal: top left to bottom corner
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
     }
     
     func calcAverage (user :Account) -> Double{
@@ -68,7 +73,7 @@ class ProfileViewController: UIViewController {
         user.scoreOne = a
         score.text = "Average Score: " + String(a)
         calculateRankings()
-        rank.text = "Rank: " + String(Int(rankingOne[0].scoreOne + rankingOne[0].scoreTwo + rankingOne[0].scoreThree + rankingOne[0].scoreFour/rankingOne[0].quizzesTaken))
+        rank.text = "Rank: " + String(rankingOne[0].scoreOne + rankingOne[0].scoreTwo + rankingOne[0].scoreThree + rankingOne[0].scoreFour/rankingOne[0].quizzesTaken)
     }
 
     /*

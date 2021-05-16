@@ -48,18 +48,26 @@ class CreateRandomAnswersViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         // Set an array of CGColors to create the gradient
-        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1).cgColor, UIColor(red: 50/255, green: 180/255, blue: 150/255, alpha: 1).cgColor]
+        gradientLayer.colors = [#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor, UIColor(red: 50/255, green: 150/255, blue: 150/255, alpha: 1).cgColor]
         
         // Rasterize this layer to improve perfromance
         gradientLayer.shouldRasterize = true
         
         // Apply the gradient to the background
         background.layer.insertSublayer(gradientLayer, at: 0)
+        
+        // Diagonal: top left to bottom corner
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
     }
     
     @IBAction func submit(_ sender: Any) {
         let dic = ["r1" : q1a1.text!, "r2" : q1a2.text!, "r3" : q1a3.text!, "r4" : q2a1.text!, "r5" : q2a2.text!,"r6" : q2a3.text!,"r7" : q3a1.text!, "r8" : q3a2.text!, "r9" : q3a3.text!, "r10" : q4a1.text!, "r11" : q4a2.text!,"r12" : q4a3.text!,"r13" : q5a1.text!, "r14" : q5a2.text!,"r15" : q5a3.text!]
         DBHelper.inst.addAnswerss(object: dic)
+        
+        let admin = self.storyboard?.instantiateViewController(identifier: "admin") as! AdminViewController
+        admin.modalPresentationStyle = .fullScreen
+        self.present(admin, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
