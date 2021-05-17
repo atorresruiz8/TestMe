@@ -14,6 +14,8 @@
 		8B352E26264AD481007D2665 /* CurrentUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */; };
 		8B352E27264AD481007D2665 /* CurrentUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */; };
 		8B352E2F264B3E59007D2665 /* QuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B352E2E264B3E59007D2665 /* QuizzViewController.swift */; };
+		8B4D98612652CD9F0036AEB1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D98602652CD9F0036AEB1 /* WelcomeViewController.swift */; };
+		8B4D98632652D0830036AEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D98622652D0820036AEB1 /* Assets.xcassets */; };
 		8B6FE90C2650FA3000C77B86 /* CreateanswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FE90A2650FA3000C77B86 /* CreateanswersViewController.swift */; };
 		8B6FE90D2650FA3000C77B86 /* CreatQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6FE90B2650FA3000C77B86 /* CreatQuizViewController.swift */; };
 		8B83E0A6264B511E007B476A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B83E0A5264B511E007B476A /* DashboardViewController.swift */; };
@@ -25,7 +27,6 @@
 		8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A302649827B00D688C3 /* ViewController.swift */; };
 		8B8B5A342649827B00D688C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A322649827B00D688C3 /* Main.storyboard */; };
 		8B8B5A372649827B00D688C3 /* TestMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B5A352649827B00D688C3 /* TestMe.xcdatamodeld */; };
-		8B8B5A392649827E00D688C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A382649827E00D688C3 /* Assets.xcassets */; };
 		8B8B5A3C2649827E00D688C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B5A3A2649827E00D688C3 /* LaunchScreen.storyboard */; };
 		8B9F07AE264A2A7100474196 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F07AD264A2A7100474196 /* AdminViewController.swift */; };
 		8B9F07B0264A2C0300474196 /* BlockUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9F07AF264A2C0300474196 /* BlockUsersViewController.swift */; };
@@ -56,6 +57,8 @@
 		8B352E24264AD481007D2665 /* CurrentUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrentUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8B352E25264AD481007D2665 /* CurrentUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CurrentUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B352E2E264B3E59007D2665 /* QuizzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizzViewController.swift; sourceTree = "<group>"; };
+		8B4D98602652CD9F0036AEB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8B4D98622652D0820036AEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B6FE90A2650FA3000C77B86 /* CreateanswersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateanswersViewController.swift; sourceTree = "<group>"; };
 		8B6FE90B2650FA3000C77B86 /* CreatQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatQuizViewController.swift; sourceTree = "<group>"; };
 		8B83E0A5264B511E007B476A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		8B8B5A302649827B00D688C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B8B5A332649827B00D688C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B8B5A362649827B00D688C3 /* TestMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestMe.xcdatamodel; sourceTree = "<group>"; };
-		8B8B5A382649827E00D688C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B8B5A3B2649827E00D688C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B8B5A3D2649827E00D688C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9F07AD264A2A7100474196 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
@@ -195,9 +197,10 @@
 				8B8B5A2E2649827B00D688C3 /* SceneDelegate.swift */,
 				8B8B5A302649827B00D688C3 /* ViewController.swift */,
 				8B8B5A322649827B00D688C3 /* Main.storyboard */,
-				8B8B5A382649827E00D688C3 /* Assets.xcassets */,
+				8B4D98622652D0820036AEB1 /* Assets.xcassets */,
 				8B8B5A3A2649827E00D688C3 /* LaunchScreen.storyboard */,
 				8B8B5A3D2649827E00D688C3 /* Info.plist */,
+				8B4D98602652CD9F0036AEB1 /* WelcomeViewController.swift */,
 				8B8B5A352649827B00D688C3 /* TestMe.xcdatamodeld */,
 				8B027CBF2649C73900F9FBD5 /* DBHelper.swift */,
 			);
@@ -273,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B8B5A3C2649827E00D688C3 /* LaunchScreen.storyboard in Resources */,
-				8B8B5A392649827E00D688C3 /* Assets.xcassets in Resources */,
+				8B4D98632652D0830036AEB1 /* Assets.xcassets in Resources */,
 				8B8B5A342649827B00D688C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +335,7 @@
 				8B8B5A312649827B00D688C3 /* ViewController.swift in Sources */,
 				8B9F07AE264A2A7100474196 /* AdminViewController.swift in Sources */,
 				8B6FE90C2650FA3000C77B86 /* CreateanswersViewController.swift in Sources */,
+				8B4D98612652CD9F0036AEB1 /* WelcomeViewController.swift in Sources */,
 				8B87FC93264C264A00832278 /* AvailableQuiz+CoreDataProperties.swift in Sources */,
 				8B027CC02649C73900F9FBD5 /* DBHelper.swift in Sources */,
 				8B6FE90D2650FA3000C77B86 /* CreatQuizViewController.swift in Sources */,

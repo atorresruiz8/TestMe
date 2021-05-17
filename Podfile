@@ -7,4 +7,6 @@ target 'TestMe' do
 
   # Pods for TestMe
 pod 'SideMenu'
+pod 'FBSDKLoginKit'
 end
+

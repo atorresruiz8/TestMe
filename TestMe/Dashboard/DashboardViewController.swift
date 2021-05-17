@@ -101,32 +101,12 @@ class DashboardViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func loadCQuiz(_ sender: Any) {
-        let data = DBHelper.inst.getQuestions()
-        for a in data {
-            if (a.category == "c"){
-                DashboardViewController.cat = a.category!
-                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-                quiz.modalPresentationStyle = .fullScreen
-                self.present(quiz, animated: true, completion: nil)
-            }
-       
-        }
-    }
-    
-    
-    @IBAction func loadSQLQuiz(_ sender: Any) {
-        let data = DBHelper.inst.getQuestions()
-        for a in data {
-            if (a.category == "sql"){
-                DashboardViewController.cat = a.category!
-                let quiz = self.storyboard?.instantiateViewController(identifier: "quiz") as! QuizzViewController
-                quiz.modalPresentationStyle = .fullScreen
-                self.present(quiz, animated: true, completion: nil)
-            }
-       
-        }
+    @IBAction func logoutUser(_ sender: Any) {
+        LoginViewController.loginManager.logOut()
+        print("User logout succesfully")
+        let login = self.storyboard?.instantiateViewController(identifier: "login") as! LoginViewController
+        login.modalPresentationStyle = .fullScreen
+        self.present(login, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

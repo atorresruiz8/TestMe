@@ -10,6 +10,7 @@ import UIKit
 class BlockUsersViewController: UIViewController {
 
     @IBOutlet var background: UIView!
+    @IBOutlet weak var blockBut: UIButton!
     @IBOutlet weak var blockUsers: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,8 @@ class BlockUsersViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
         gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
         
-        blockUsers.layer.cornerRadius = 15.0
-        blockUsers.layer.cornerCurve = .continuous
+        blockBut.layer.cornerRadius = 15.0
+        blockBut.layer.cornerCurve = .continuous
     }
     
     @IBAction func confirmBlockUser(_ sender: Any) {

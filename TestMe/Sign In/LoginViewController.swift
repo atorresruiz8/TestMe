@@ -5,10 +5,15 @@
 //  Created by Home on 5/10/21.
 //
 import UIKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldDelegate is used to declare the function for pushing a key to exit keyboard input
+    
     // Used for the "remember my login" feature
     var ud = UserDefaults.standard
+    
+    // used for facebook log in
+    static let loginManager : LoginManager = LoginManager()
     
     @IBOutlet weak var rememberMe: UILabel!
     @IBOutlet weak var sw: UISwitch!
@@ -18,10 +23,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet var background: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         // these delegates are used in conjunction with textFieldShouldReturn to allow the user to exit touch screen keyboard input by pushing the return key
         username.delegate = self
         password.delegate = self
@@ -51,6 +58,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
         gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
         
+        // used with facebook login
+        ApplicationDelegate.initializeSDK(nil)
         
         if (sw.isOn) { // if the switch is on, remember the last username/password combo entered and automatically enter it for the user
             username.text = ud.string(forKey: "username")
@@ -76,7 +85,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
                 dashboard.modalPresentationStyle = .fullScreen
                 self.present(dashboard, animated: true, completion: nil)
             } else if (thisUser.blockedStatus == true) {
-                print("You are blocked.")
+                // create the alert
+                let alert = UIAlertController(title: "User Blocked", message: "You are blocked. Please create a new account.", preferredStyle: UIAlertController.Style.alert)
+                
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -98,6 +114,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate { // TextFieldD
         password.text = ud.string(forKey: "password")
     }
  
+    @IBAction func FBLogin(_ sender: Any) {
+        if AccessToken.current == nil {
+                   //Session is not active
+                   
+            LoginViewController.loginManager.logIn(permissions: ["public_profile","email"], from: self, handler: { result,error   in
+                if error != nil {
+               
+                } else if result!.isCancelled {
+              print("login cancelled by user")
+                } else {
+                    print("login successfully")
+                    let token = result?.token?.tokenString
+                           let req = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], tokenString: token, version: nil, httpMethod: .get)
+                           req.start {(connection,result,error)
+                               in
+                            print(result!)
+                            
+                           }
+                    let dashboard = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
+                    dashboard.modalPresentationStyle = .fullScreen
+                    self.present(dashboard, animated: true, completion: nil)
+                   
+                }
+            })
+            
+               } else {
+                print("already logged in")
+                let dashboard = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
+                dashboard.modalPresentationStyle = .fullScreen
+                self.present(dashboard, animated: true, completion: nil)
+               }
+        }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // used to make it so the user can push the return key on the keyboard to exit out of keyboard input
         textField.resignFirstResponder()
         return true
