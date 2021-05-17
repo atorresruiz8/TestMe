@@ -168,24 +168,6 @@ class DBHelper {
         return a!
     }
     
-//    func getLastOne()->[AvailableQuiz] {
-//        var aq = [AvailableQuiz]()
-//        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "AvailableQuiz")
-//
-//        // add sort descriptor
-//        let sd = NSSortDescriptor(key: "question", ascending: false)
-//        fetchReq.sortDescriptors = [sd]
-//        fetchReq.fetchLimit = 1
-//
-//        do {
-//            aq = try context!.fetch(fetchReq) as! [AvailableQuiz]
-//        } catch {
-//            print(error)
-//        }
-//
-//        return aq
-//    }
-    
     func wipeActiveQuiz() { // wipes the core data clean
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "AvailableQuiz")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
@@ -285,4 +267,26 @@ class DBHelper {
             print("Account not created.")
         }
     }
+    
+    func getAnswersByCategory (category : String)-> Quiz { // checks for one specific instance of account credentials to see if it exists in coredata
+            var a : Quiz?
+            let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Quiz")
+            fetchReq.predicate = NSPredicate(format: "category == %@", category)
+
+            fetchReq.fetchLimit = 1
+            do {
+                let req = try context?.fetch(fetchReq) as! [Quiz]
+                if(req.count != 0){
+                    a = req.first!
+                }
+                else { // Account data doesn't exist
+                    print("Quiz Answers not found.")
+                }
+            }
+            catch {
+                print("Error.")
+            }
+
+            return a!
+        }
 }

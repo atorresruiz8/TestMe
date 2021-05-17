@@ -2,7 +2,7 @@
 //  Quiz+CoreDataProperties.swift
 //  
 //
-//  Created by Antonio Torres-Ruiz on 5/10/21.
+//  Created by Antonio Torres-Ruiz on 5/17/21.
 //
 //
 
@@ -27,14 +27,7 @@ extension Quiz {
     @NSManaged public var correct3: Bool
     @NSManaged public var correct4: Bool
     @NSManaged public var correct5: Bool
-    @NSManaged public var question1: String?
-    @NSManaged public var question2: String?
-    @NSManaged public var question3: String?
-    @NSManaged public var question4: String?
-    @NSManaged public var question5: String?
-    @NSManaged public var questionType: String?
-    @NSManaged public var score: Double
-    @NSManaged public var userQuiz: Account?
+    @NSManaged public var quizName: String?
     @NSManaged public var r1: String?
     @NSManaged public var r2: String?
     @NSManaged public var r3: String?
@@ -50,5 +43,8 @@ extension Quiz {
     @NSManaged public var r13: String?
     @NSManaged public var r14: String?
     @NSManaged public var r15: String?
+    @NSManaged public var score: Double
+    @NSManaged public var userName: String?
+    @NSManaged public var userQuiz: Account?
 
 }

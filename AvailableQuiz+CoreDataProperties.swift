@@ -2,7 +2,7 @@
 //  AvailableQuiz+CoreDataProperties.swift
 //  
 //
-//  Created by Antonio Torres-Ruiz on 5/12/21.
+//  Created by Antonio Torres-Ruiz on 5/17/21.
 //
 //
 

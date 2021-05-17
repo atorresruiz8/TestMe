@@ -17,6 +17,7 @@ class CreateRandomAnswersViewController: UIViewController {
     
     @IBOutlet var background: UIView!
     
+    @IBOutlet weak var category: UITextField!
     @IBOutlet weak var q1a1: UITextField!
     @IBOutlet weak var q1a2: UITextField!
     @IBOutlet weak var q1a3: UITextField!
@@ -25,6 +26,7 @@ class CreateRandomAnswersViewController: UIViewController {
     @IBOutlet weak var q2a2: UITextField!
     @IBOutlet weak var q2a3: UITextField!
     
+    @IBOutlet weak var submitRndmAns: UIButton!
     
     @IBOutlet weak var q3a1: UITextField!
     @IBOutlet weak var q3a2: UITextField!
@@ -59,6 +61,10 @@ class CreateRandomAnswersViewController: UIViewController {
         // Diagonal: top left to bottom corner
         gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
         gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
+        
+        submitRndmAns.layer.cornerRadius = 15.0
+        submitRndmAns.layer.cornerCurve = .continuous
+        
     }
     
     @IBAction func submit(_ sender: Any) {

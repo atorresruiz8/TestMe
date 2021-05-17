@@ -11,24 +11,22 @@ class CreateanswersViewController: UIViewController {
 
     @IBOutlet var background: UIView!
     @IBOutlet weak var question1: UILabel!
-    
     @IBOutlet weak var question2: UILabel!
     @IBOutlet weak var question3: UILabel!
     @IBOutlet weak var question4: UILabel!
     @IBOutlet weak var question5: UILabel!
     
     @IBOutlet weak var submit: UIButton!
-    @IBOutlet weak var categoryLB: UILabel!
-    
+
     @IBOutlet weak var answer1: UITextField!
     @IBOutlet weak var answer2: UITextField!
     @IBOutlet weak var answer3: UITextField!
     @IBOutlet weak var answer4: UITextField!
     @IBOutlet weak var answer5: UITextField!
     
+    @IBOutlet weak var category: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         // Do any additional setup after loading the view.
         
         // Create a gradient layer
@@ -45,25 +43,26 @@ class CreateanswersViewController: UIViewController {
         
         // Apply the gradient to the background
         background.layer.insertSublayer(gradientLayer, at: 0)
-        
-        // Diagonal: top left to bottom corner
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
             
         submit.layer.cornerRadius = 15.0
         submit.layer.cornerCurve = .continuous
     }
     
     @IBAction func submitAnswers(_ sender: Any) {
-     
         
-        let dic = ["a1" : answer1.text!, "a2" : answer2.text!, "a3" : answer3.text!, "a4" : answer4.text!, "a5" : answer5.text!]
+//        let data = DBHelper.inst.getQuestions()
+//        for a in data{
+//
+        
+            let dic = ["a1" : answer1.text!, "a2" : answer2.text!, "a3" : answer3.text!, "a4" : answer4.text!, "a5" : answer5.text!, "category" : category.text!]
         DBHelper.inst.addAnswerss(object: dic)
-    }
+            dump(dic)
+        }
+//        }
     
-    @IBAction func deleteQuiz(_ sender: Any) {
-        DBHelper.inst.wipeActiveQuiz()
-    }
+//    @IBAction func deleteQuiz(_ sender: Any) {
+//        DBHelper.inst.wipeActiveQuiz()
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         let data = DBHelper.inst.getQuestions()
@@ -73,7 +72,8 @@ class CreateanswersViewController: UIViewController {
             question3.text = a.q3!
             question4.text = a.q4!
             question5.text = a.q5!
-            categoryLB.text = a.category!
+            category.text = a.category!
+            
         }
     }
     

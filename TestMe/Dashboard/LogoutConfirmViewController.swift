@@ -36,10 +36,10 @@ class LogoutConfirmViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
         gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
         
-        yesBut.layer.cornerRadius = 10.0
+        yesBut.layer.cornerRadius = 15.0
         yesBut.layer.cornerCurve = .continuous
         
-        noBut.layer.cornerRadius = 10.0
+        noBut.layer.cornerRadius = 15.0
         noBut.layer.cornerCurve = .continuous
     }
     

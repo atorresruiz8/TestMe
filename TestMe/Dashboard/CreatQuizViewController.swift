@@ -21,7 +21,7 @@ class CreatQuizViewController: UIViewController {
     @IBOutlet weak var questionType: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+
         // Do any additional setup after loading the view.
         
         // Create a gradient layer
@@ -39,19 +39,14 @@ class CreatQuizViewController: UIViewController {
         // Apply the gradient to the background
         background.layer.insertSublayer(gradientLayer, at: 0)
         
-        // Diagonal: top left to bottom corner
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0) // top left
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1) // bottom right
-        
-        enterAns.layer.cornerRadius = 10.0
+        enterAns.layer.cornerRadius = 15.0
         enterAns.layer.cornerCurve = .continuous
     }
     
    
     @IBAction func saveQuestions(_ sender: Any) {
-        let dic = ["q1" : question1.text!, "q2" : question2.text!,"q3" : question3.text!,"q4" : question4.text!,"q5" : question5.text!,"category" : category.text!, "questionType" : questionType.text!]
+        let dic = ["q1" : question1.text!, "q2" : question2.text!,"q3" : question3.text!,"q4" : question4.text!,"q5" : question5.text!, "category" : category.text!, "questionType" : questionType.text!]
         DBHelper.inst.addQuestions(object: dic)
-        
     }
     
     
