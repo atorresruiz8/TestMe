@@ -68,13 +68,13 @@ class QuizzViewController: UIViewController {
         Question.text = DashboardViewController.cat
     }
     var isChecked = false
-   var score = 0
+    var score = 0.0
     @IBAction func btn1(_ sender: UIButton) {
         if isChecked{
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q3) {
-                    score -= 1
+                    score -= 1.0
                 }
             }
             isChecked = false
@@ -87,16 +87,18 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q3) {
-                    score += 1
+                    score += 1.0
                 }
             }
          
             isChecked = true
             let image = UIImage(systemName: "circle.fill")
             sender.setImage(image, for: .normal)
+            
             print(score)
         }
-      
+        
+       
     }
     
     @IBAction func btn2(_ sender: UIButton) {
@@ -104,7 +106,7 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q2) {
-                    score -= 1
+                    score -= 1.0
                 }
             }
             
@@ -117,7 +119,7 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q2) {
-                    score += 1
+                    score += 1.0
                 }
                 
                 
@@ -134,7 +136,7 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q4) {
-                    score -= 1
+                    score -= 1.0
                 }
             }
             
@@ -148,7 +150,7 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q4) {
-                    score += 1
+                    score += 1.0
                 }
             }
             isChecked = true
@@ -157,15 +159,17 @@ class QuizzViewController: UIViewController {
           print(score)
         }
     }
+    var x1 = 0
     @IBAction func btn4(_ sender: UIButton) {
+        
         if isChecked{
-            
+
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q1 || Question.text == q.q5) {
-                    score -= 1
+                    score -= 1.0
                 }
-               
+
             }
             isChecked = false
             let image = UIImage(systemName: "circle")
@@ -176,22 +180,23 @@ class QuizzViewController: UIViewController {
             let da = DBHelper.inst.getQuestions()
             for q in da {
                 if (Question.text == q.q1 || Question.text == q.q5) {
-                    score += 1
+                    score += 1.0
                 }
-               
+
             }
-          
+
             isChecked = true
             let image = UIImage(systemName: "circle.fill")
             sender.setImage(image, for: .normal)
             print(score)
-          
+
         }
     }
     
     var x = 0
 
 
+  
     @IBAction func nextQuestion(_ sender: Any) {
         
       let quest =  DBHelper.inst.getQuestions()
@@ -201,6 +206,7 @@ class QuizzViewController: UIViewController {
                 
                         switch x {
                         case 0:
+                            
                            Question.text = q.q1
                             A1.isHidden = false
                             A2.isHidden = false
@@ -211,6 +217,7 @@ class QuizzViewController: UIViewController {
                             btn2.isHidden = false
                             btn3.isHidden = false
                             btn4.isHidden = false
+                            isChecked = false
                             x = 1
                         case 1:
                             A1.isHidden = false
@@ -223,7 +230,7 @@ class QuizzViewController: UIViewController {
                             btn3.isHidden = false
                             btn4.isHidden = false
                             Question.text = q.q2
-                          
+                            isChecked = false
                             x = 2
                         case 2:
                             A1.isHidden = false
@@ -236,7 +243,7 @@ class QuizzViewController: UIViewController {
                             btn3.isHidden = false
                             btn4.isHidden = false
                             Question.text = q.q3
-                           
+                            
                             x = 3
                         case 3:
                             A1.isHidden = false
@@ -249,6 +256,7 @@ class QuizzViewController: UIViewController {
                             btn3.isHidden = false
                             btn4.isHidden = false
                             Question.text = q.q4
+                            
                             x = 4
                          
                         case 4:
@@ -256,18 +264,11 @@ class QuizzViewController: UIViewController {
                            
                             x = 5
                         case 5:
-//                                        A1.isHidden = true
-//                                        A2.isHidden = true
-//                                        A3.isHidden = true
-//                                        A4.isHidden = true
-//                                        typeAnswer.isHidden = false
-//                                        btn1.isHidden = true
-//                                        btn2.isHidden = true
-//                                        btn3.isHidden = true
-//                                        btn4.isHidden = true
-//                            let quiz = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
-//                            quiz.modalPresentationStyle = .fullScreen
-//                            self.present(quiz, animated: true, completion: nil)
+                          
+                           
+                            let quiz = self.storyboard?.instantiateViewController(identifier: "dashboard") as! DashboardViewController
+                            quiz.modalPresentationStyle = .fullScreen
+                            self.present(quiz, animated: true, completion: nil)
                            
                             x = 6
                         default:
